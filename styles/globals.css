@@ -130,3 +130,26 @@ nav{
 .contact-modal {
   height: 600px;
 }
+
+.services-section {
+  text-align: left;
+}
+
+.services {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap;
+  min-width: fit-content !important;
+}
+
+.price-calculator {
+  margin-top: 50px;
+}
+
+.final-price{
+  margin-left: -20px;
+}
+
+.services-main{
+  margin-top: -50px !important;
+}
