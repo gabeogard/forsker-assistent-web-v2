@@ -16,7 +16,7 @@ jobs:
       - run: npm ci
       - run: npm run deploy
       - run: npm test
-      - name: 'Upload Artifact'
+      - name: 'Upload static HTML build'
         uses: actions/upload-artifact@v2
         with:
           name: build
@@ -31,9 +31,16 @@ jobs:
         uses: mathieudutour/github-tag-action@v5.6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: out/
+      - name: Tar build for GitHub release
+        run: tar -cvf release.tar out
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
+          artifacts: release.tar
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
