@@ -2,10 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ["no"],
-    defaultLocale: "no"
+
+  // Not supported for static HTML export
+  experimental: {
+    images: { unoptimized: true },
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
