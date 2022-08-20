@@ -2,7 +2,7 @@ name: other branches actions
 on:
   push:
     branches-ignore:
-      - [ $default-branch ]
+      - main
 
 jobs:
   build:
