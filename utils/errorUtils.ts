@@ -1,5 +1,5 @@
-export const require = (check: boolean, onError: () => /* errorMessage */ string) => {
+export const check = (check: boolean) => (lazyMessage: () => string) => {
     if (!check) {
-        throw new Error(onError());
+        throw new Error(lazyMessage());
     }
 }
