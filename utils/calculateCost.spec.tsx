@@ -1,12 +1,6 @@
 import { calculateCost } from './calculateCost';
 
 describe('useCalculateCost', () => {
-    it('should throw error if less than 1 person', () => {
-        expect(() =>
-            calculateCost(0, 10)
-        ).toThrow('Amount of people cannot be less than 1,')
-    });
-
     it('should default to 1 10 min interval if less than 10 minutes', () => {
         expect(calculateCost(2, 5)).toBe(300);
     });
