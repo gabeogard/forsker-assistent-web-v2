@@ -14,4 +14,6 @@ fs.renameSync(`./out`, tmpPath);
 console.info('Moving to release folder and creating symlink');
 fs.mkdirSync(targetPath, { recursive: true });
 fs.renameSync(`${timestamp}`, targetPath);
-fs.symlinkSync(path.join(__dirname, targetPath), path.join(__dirname, 'out/current'));
+
+process.chdir('./out');
+fs.symlinkSync(`${timestamp}`, 'current');
