@@ -1,7 +1,7 @@
-name: master actions
+name: other branches actions
 on:
   push:
-    branches:
+    branches-ignore:
       - [ $default-branch ]
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '16.x'
       - run: npm ci
       - run: npm run build
       - run: npm test
