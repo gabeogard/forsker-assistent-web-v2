@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

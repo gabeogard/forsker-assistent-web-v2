@@ -5,6 +5,7 @@ import NavItem from "./NavItem";
 import { useModal } from "../hooks/useModal";
 import { Modal } from "./modal";
 import ContactForm from "./ContactForm";
+import magnifyingGlass from "../assets/magnifying-glass.svg";
 import ContactButton from "./ContactButton";
 
 const MENU_LIST = [
@@ -21,9 +22,17 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`nav`}>
-        <Link href={"/"}>
+        <Link href={"/"} className="nav-logo">
           <a>
-            <h1 className="logo">Forskerassistenten</h1>
+          <div className="logo">
+              <Image
+                src={magnifyingGlass}
+                width={30}
+                height={30}
+                alt={"logo"}
+              />
+              <p className={"logo-Text"}>Forskerassistenten</p>
+          </div>
           </a>
         </Link>
         <div
@@ -46,8 +55,8 @@ const Navbar = () => {
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
           ))}
-          <ContactButton/>
-          </div>
+          <ContactButton />
+        </div>
       </nav>
     </header>
   );

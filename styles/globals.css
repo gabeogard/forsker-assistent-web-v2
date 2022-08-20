@@ -153,3 +153,40 @@ nav{
 .services-main{
   margin-top: -50px !important;
 }
+
+.gitlogo {
+  color: white !important;
+}
+
+.min-h-screen{
+  margin-top: -180px;
+}
+
+.label-text{
+  color: black;
+}
+
+.label-text-alt{
+  color: black;
+}
+
+.extra-text{
+  color: white;
+}
+
+.radio{
+  border-color: white;
+}
+
+.service-list-text{
+  color: rgb(208, 208, 208)
+}
+
+.hero-content{
+  max-width: 300px;
+}
+
+.logo{
+  display: flex !important;
+  flex-direction: row !important;
+}

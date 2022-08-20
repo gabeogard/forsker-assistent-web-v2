@@ -14,20 +14,20 @@ const ContactForm = () => {
               className="input input-bordered w-full max-w-xs"
             />
             <label className="label">
-              <span className="label-text-alt">Nødvendige felt*</span>{" "}
+              <span className="label-text-alt">Nødvendig felt*</span>{" "}
             </label>
           </div>
-          <div className="form-control">
+          <div className="form-control w-full max-w-xs">
             <label className="label">
-              <span className="label-text">Your Email</span>
+              <span className="label-text">E-post adresse</span>
             </label>
-            <label className="input-group">
-              <span>Email</span>
-              <input
-                type="text"
-                placeholder="info@site.com"
-                className="input input-bordered"
-              />
+            <input
+              type="text"
+              placeholder="ola@nordmann.no"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <label className="label">
+              <span className="label-text-alt">Nødvendig felt*</span>{" "}
             </label>
           </div>
         </div>
@@ -55,7 +55,7 @@ const ContactForm = () => {
             <span className="label-text-alt">Nødvendig felt*</span>{" "}
           </label>
         </div>
-
+        <button className="btn btn-success">Send forespørsel</button>
       </div>
     
   );

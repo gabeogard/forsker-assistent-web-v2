@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 const About: NextPage = () => {
@@ -17,11 +18,17 @@ const About: NextPage = () => {
             <p className="py-6">
             Forskerassistenten drives av forskere som selv ser behovet for en forskerassistent når tiden ikke strekker til. Vi har flere års erfaring med å transkribere og tolke forskningsdata, og vet også viktigheten av korrekt og lovmessig datahåndtering.
             </p>
+            <h2>Hvem er vi:</h2>
+            <p><strong>Anita Øgård-Repål</strong></p>
+            <p>Universitetslektor/Ph.D stipendiat, Universitetet i Agder</p>
+            <p><strong>Monika Øgård</strong></p>
+            <p>Universitetslektor/Ph.D stipendiat, Universitetet i Agder</p>
           </div>
         </div>
       </div>
+      <Footer/>
       </div>
   )
 }
 
-export default About
+export default About;
