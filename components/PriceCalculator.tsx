@@ -14,7 +14,7 @@ const PriceCalculator = () => {
           <p>Hvor mange deltagere skal transkriberes</p>
           <select
             value={amountPeople}
-            onChange={(event) => setAmountPeople(Number.parseInt(event.target.value))}
+            onChange={(event) => setAmountPeople(Number(event.target.value))}
             className="select select-bordered w-full max-w-xs"
           >
             <option disabled>Antall</option>
@@ -25,7 +25,7 @@ const PriceCalculator = () => {
           <p>Hvor lang er lydfilen?</p>
           <input
             value={selectedMinutes ?? 0}
-            onChange={(event) => setSelectedMinutes(Number.parseInt(event.target.value) || selectedMinutes)}
+            onChange={(event) => setSelectedMinutes(Number(event.target.value))}
             type="number"
             placeholder="Antall minutter"
             className="input input-bordered w-full max-w-xs"
@@ -56,7 +56,7 @@ const PriceCalculator = () => {
           </div>
           <div className="card-actions justify-end">
             <p className="final-price">
-              <strong>Pris inkl mva. (25%):</strong> {amountPeople ? calculateCost(amountPeople, selectedMinutes) : 0} ,-
+              <strong>Pris inkl mva. (25%):</strong> {amountPeople ? calculateCost(amountPeople, selectedMinutes).toLocaleString('nb-no') : 0},-
             </p>
           </div>
         </div>
