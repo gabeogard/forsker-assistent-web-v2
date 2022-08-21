@@ -167,7 +167,7 @@ nav{
 }
 
 .services-main{
-  margin-top: -50px !important;
+  margin-top: -230px !important;
 }
 
 .gitlogo {
@@ -203,6 +203,7 @@ nav{
 }
 .hero{
   padding-top: 30px;
+  margin-top: 1px !important;
 }
 .logo{
   display: flex !important;
