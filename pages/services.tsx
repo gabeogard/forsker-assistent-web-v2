@@ -13,7 +13,7 @@ const Services: NextPage = () => {
       <Navbar />
       <div className="hero min-h-screen bg-base-200 services-main">
         <div className="hero-content text-center">
-          <div className="max-w-md services">
+          <div className="services max-w-md">
           <div className="services-section">
           <h1>Transkribering</h1>
             <p>

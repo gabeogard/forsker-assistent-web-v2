@@ -201,7 +201,9 @@ nav{
 .hero-content{
   max-width: 300px;
 }
-
+.hero{
+  padding-top: 30px;
+}
 .logo{
   display: flex !important;
   flex-direction: row !important;
