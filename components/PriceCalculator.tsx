@@ -8,7 +8,7 @@ const PriceCalculator = () => {
 
   return (
     <div className="price-calculator">
-      <div className="card w-96 bg-primary text-primary-content">
+      <div className="card w-96 bg-primary text-primary-content px-4">
         <div className="card-body">
           <h2 className="card-title">Priskalkulator</h2>
           <p>Hvor mange deltagere skal transkriberes</p>

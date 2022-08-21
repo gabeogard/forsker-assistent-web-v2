@@ -126,6 +126,21 @@ nav{
   height: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  
+  .textarea{
+    width: 200px;
+  }
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer{
+    padding: 40px !important;
+  }
+}
 
 .contact-modal {
   height: 600px;
@@ -133,6 +148,7 @@ nav{
 
 .services-section {
   text-align: left;
+  padding: 15px;
 }
 
 .services {
