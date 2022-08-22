@@ -11,36 +11,24 @@ const Services: NextPage = () => {
     <div>
       <title>Tjenester</title>
       <Navbar />
-      <div className="hero my-5 min-h-screen bg-base-200 services-main">
-        <div className="hero-content text-center">
-          <div className="services max-w-md">
-          <div className="services-section">
-          <h1>Transkribering</h1>
-            <p>
-              Vi transkriberer forskningsintervjuer for både studenter og
-              forskere. Dette kan være personlige intervjuer eller
-              gruppeintervjuer.
-            </p>
-            <br></br>
-            <p>
-              Hver kunde og hvert oppdrag har sine ulikheter, og prisene kan
-              derfor variere noe. Det gjelder f.eks dersom:
-            </p>
-            <ul className="service-list-text">
-              <li>- Dere vil ha jobben gjort på kort varsel</li>
-              <li>- Dersom det er dårlig lydkvalitet</li>
-              <li>- Dersom lydfilen er på engelsk</li>
-              <li>
-                - Dersom dere har noen spesielle behov når det gjelder tjenesten
-              </li>
-            </ul>
-            <br></br>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="flex flex-col w-full lg:flex-row">
+          <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">
+            <div className="service-textsection">
+              <h1 className="text-2xl font-bold text-service">Transkribering</h1>
+              <p className="text-service">Har du et intervju som er spilt inn på video eller lydopptaker, og ønsker å få det i skriftlig format?</p>
+              <p className="text-service">Vi hjelper deg med transkripsjon av intervju, og kan levere tekstfilen i løpet av kort tid!</p>
+              <p className="text-service">Vi transkriberer forskningsintervjuer for både studenter og forskere.</p>
+              <p className="text-service">Dette kan være personlige intervjuer eller gruppeintervjuer. Forskerassistenten transkriberer på en grundig og strukturert måte. </p>
+            </div>
           </div>
-          <PriceCalculator/>
+          <div className="divider lg:divider-horizontal"></div>
+          <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">
+              <PriceCalculator/>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

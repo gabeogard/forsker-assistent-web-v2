@@ -70,6 +70,10 @@ nav{
   justify-content: center;
   align-items: center;
 }
+
+.text-service{
+  color:rgb(208, 208, 208);
+}
 @media screen and (min-width: 768px) {
   .nav__menu-bar{
     display: none;
@@ -140,6 +144,14 @@ nav{
   .footer{
     padding: 40px !important;
   }
+
+  .flex{
+    margin-top: 175px;
+  }
+
+  .text-center{
+    margin-top: 100px;
+  }
 }
 
 .contact-modal {
@@ -149,6 +161,12 @@ nav{
 .services-section {
   text-align: left;
   padding: 15px;
+  display: flex;
+  width: 800px;
+}
+
+.services-description{
+  margin-top: 3rem;
 }
 
 .services {
@@ -159,7 +177,12 @@ nav{
 }
 
 .price-calculator {
-  margin-top: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.text2xl{
+  font-family: 'Work Sans', sans-serif;
 }
 
 .final-price{
@@ -167,7 +190,7 @@ nav{
 }
 
 .services-main{
-  margin-top: -230px !important;
+  margin-top: -150px !important;
 }
 
 .gitlogo {
@@ -202,8 +225,6 @@ nav{
   max-width: 300px;
 }
 .hero{
-  padding-top: 30px;
-  margin-top: 1px !important;
 }
 .logo{
   display: flex !important;
