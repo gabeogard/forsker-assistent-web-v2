@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  lsrcr_acp:
+    image: ghcr.io/gabeogard/forsker-assistent-web-v2:main
+    ports:
+      - "127.0.0.1:3030:3030"
+    environment:
+      NODE_ENV: production
+      PORT: 3030
