@@ -6,9 +6,9 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY next.config.js ./
+COPY --chown=nextjs:nodejs next.config.js ./
+COPY --chown=nextjs:nodejs .next/static .next/static
 COPY --chown=nextjs:nodejs .next/standalone ./
-COPY --chown=nextjs:nodejs .next/static ./
 
 USER nextjs
 
