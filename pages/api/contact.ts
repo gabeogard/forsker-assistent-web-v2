@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from "next/types";
 
 require('dotenv').config()
-const PASSWORD = process.env.password
+const PASSWORD = process.env.PASSWORD;
 
 
 const contact = (req: NextApiRequest, res: NextApiResponse) => {
