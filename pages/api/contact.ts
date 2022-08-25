@@ -38,9 +38,9 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
                 text: `${req.body.email} ${req.body.message}`,
                 html:`<div>{req.body.message}</div>`
             }
-            console.log("help")
             transporter.sendMail(mailData)
-
+            console.info("Sent ", mailData);
+            
             res.status(200)
 
         }
