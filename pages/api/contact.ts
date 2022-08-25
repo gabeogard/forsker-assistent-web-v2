@@ -39,17 +39,11 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
                 html:`<div>{req.body.message}</div>`
             }
             console.log("help")
-            transporter.sendMail(mailData, (err: Error, info: Error)=>{
-                if(err)
-                    console.log(err)
-                else
-                    console.log(info)
-            })
+            transporter.sendMail(mailData)
 
             res.status(200)
 
         }
-        throw new Error("Req body not correct");
     } catch (err) {
         return res.status(403).json({ err: "Error!" });
     }
