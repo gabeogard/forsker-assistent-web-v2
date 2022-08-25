@@ -10,15 +10,13 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
 
     console.log("password", PASSWORD);
     const transporter = nodemailer.createTransport({
-        host: "skuld.domene.no",
         port: 465,
+        host: "skuld.domene.no",
         auth: {
             user: "noreply@forskerassistenten.no",
             pass: PASSWORD,
-            password: PASSWORD,
         },
         authMethod: 'PLAIN',
-        pass: PASSWORD,
         secure: true,
     });
 
