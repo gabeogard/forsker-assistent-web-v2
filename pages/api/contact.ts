@@ -34,9 +34,14 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
             const mailData = {
                 from: "noreply@forskerassistenten.no",
                 to: "gabrielogard@hotmail.com",
-                subject: `Innhold: ${req.body.subject} fra ${req.body.name}`,
-                text: `${req.body.email} ${req.body.message}`,
-                html:`<div>{req.body.message}</div>`
+                subject: `Innhold: ${req.body.subject}`,
+                text: `${req.body.message}`,
+                html:
+                `<div>
+                <h1>${req.body.name}</h1>
+                <p><strong>Kontakt: ${req.body.email}</strong></p>
+                ${req.body.message}
+                </div>`
             }
             transporter.sendMail(mailData)
             console.info("Sent ", mailData);
