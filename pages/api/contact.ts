@@ -33,7 +33,7 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
         ) {
             const mailData = {
                 from: "noreply@forskerassistenten.no",
-                to: "gabrielogard@hotmail.com",
+                to: "kontakt@forskerassistente.no",
                 subject: `Innhold: ${req.body.subject}`,
                 text: `${req.body.message}`,
                 html:

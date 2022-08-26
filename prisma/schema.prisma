@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model ReceivedPost {
+  ID           Int      @id @default(autoincrement()) @db.UnsignedInt
+  sender_name  String   @db.VarChar(320)
+  sender_email String   @db.VarChar(100)
+  date_sent    DateTime @db.Date
+  subject      String   @db.VarChar(100)
+  message_body String   @db.VarChar(1000)
+}
