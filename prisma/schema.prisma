@@ -7,11 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model ReceivedPost {
+model received_post {
   ID           Int      @id @default(autoincrement()) @db.UnsignedInt
   sender_name  String   @db.VarChar(320)
   sender_email String   @db.VarChar(100)
-  date_sent    DateTime @db.Date
+  time_sent    DateTime @default(now()) @db.Timestamp(0)
   subject      String   @db.VarChar(100)
   message_body String   @db.VarChar(1000)
+  ip_address   String   @db.VarChar(39)
 }

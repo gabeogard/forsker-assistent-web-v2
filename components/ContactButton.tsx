@@ -17,7 +17,7 @@ const ContactButton = () => {
         <Modal
           isShown={isShown}
           hide={toggle}
-          modalContent={ContactForm()}
+          modalContent={<ContactForm />}
           headerText={"Kontakt"}
         />
         </div>

@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
+import { withEventValueSelector } from "../utils/input";
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -18,7 +19,6 @@ const ContactForm = () => {
       subject,
       message
     }
-
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -48,7 +48,7 @@ const ContactForm = () => {
               type="text"
               placeholder="Skriv navn her"
               name="name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={withEventValueSelector(setName)}
               className="input input-bordered w-full max-w-xs"
             />
             <label className="label">
@@ -62,7 +62,7 @@ const ContactForm = () => {
             <input
               type="text"
               name="email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={withEventValueSelector(setEmail)}
               placeholder="ola@nordmann.no"
               className="input input-bordered w-full max-w-xs"
             />
@@ -78,7 +78,7 @@ const ContactForm = () => {
           <input
             type="text textsubject"
             name="subject"
-            onChange={(e) => setSubject(e.target.value)}
+            onChange={withEventValueSelector(setSubject)}
             placeholder="Tittel"
             className="input input-bordered w-full max-w-xs"
           />
@@ -93,7 +93,7 @@ const ContactForm = () => {
           </label>
           <textarea className="textarea textarea-bordered"
           name="message"
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={withEventValueSelector(setMessage)}
            placeholder="Forklar tydelig hva du ønsker. Så svarer vi deg så snart som mulig. "/>
           <label className="label">
             <span className="label-text-alt">Nødvendig felt*</span>{" "}
