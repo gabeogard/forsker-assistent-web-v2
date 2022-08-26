@@ -1,8 +1,10 @@
 import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from "next/types";
-
 require('dotenv').config()
+import { PrismaClient } from '@prisma/client';
+
 const PASSWORD = process.env.PASSWORD;
+const prisma = new PrismaClient();
 
 
 const contact = (req: NextApiRequest, res: NextApiResponse) => {
@@ -37,7 +39,7 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
                 subject: `Innhold: ${req.body.subject}`,
                 text: `${req.body.message}`,
                 html:
-                `<div>
+                    `<div>
                 <h1>${req.body.name}</h1>
                 <p><strong>Kontakt: ${req.body.email}</strong></p>
                 ${req.body.message}
@@ -45,7 +47,7 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
             }
             transporter.sendMail(mailData)
             console.info("Sent ", mailData);
-            
+
             res.status(200)
 
         }
@@ -53,5 +55,9 @@ const contact = (req: NextApiRequest, res: NextApiResponse) => {
         return res.status(403).json({ err: "Error!" });
     }
 }
+
+
+
+
 
 export default contact;
