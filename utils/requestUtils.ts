@@ -1,10 +1,10 @@
 import { NextApiRequest } from "next";
+import { throwError } from "./errorUtils";
 
 export const getIpFromRequest = ({
   headers,
   socket: { remoteAddress },
-}: NextApiRequest) =>
-  headers["CF-Connecting-IP"] ??
-  headers["X-FORWARDED-FOR"] ??
-  headers["X-REAL-IP"] ??
-  remoteAddress;
+}: NextApiRequest): string =>
+  (headers["CF-Connecting-IP"] as string) ??
+  remoteAddress ??
+  throwError("Could not grab IP from request");
