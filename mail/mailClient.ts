@@ -19,6 +19,7 @@ export interface SendContactEmail {
   email: string;
   subject: string;
   message: string;
+  ipAddress: string;
 }
 
 export const sendEmail = async ({ name, email, subject, message }: SendContactEmail) =>

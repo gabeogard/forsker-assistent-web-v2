@@ -6,19 +6,19 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
     console.log('Sending...')
 
-    let data = {
+    const data = {
       name,
       email,
       subject,
       message
     }
+    setLoading(true);
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -29,11 +29,7 @@ const ContactForm = () => {
     }).then((res) => {
       console.log('Response succeeded!');
       console.log(res)
-      setSubmitted(true);
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
+      setLoading(false);
     })
   }
 

@@ -5,16 +5,27 @@ import { IllegalArgumentError } from "../../middlewares/errorHandling";
 import { checkOrThrowIllegalArgument } from "../../utils/errorUtils";
 import { withAllMiddlewares } from "../../middlewares";
 import { sendEmail, validateSendContactEmailRequest } from "../../mail/mailClient";
-import { storeMail } from "../../mail/mailSentStorage";
+import { hasRecentlySentEmail, storeMail } from "../../mail/mailSentStorage";
+import { getIpFromRequest } from "../../utils/requestUtils";
 
-const contact = async (req: NextApiRequest, res: NextApiResponse) => {
+const contact = async (req: NextApiRequest) => {
   const { body } = req;
   if (!validateSendContactEmailRequest(body)) {
     throw new IllegalArgumentError("Request is not valid");
   }
 
+  const bodyWithIp = {
+    ...body,
+    ipAddress: getIpFromRequest(req),
+  };
+
+  const hasRecentlySent = await hasRecentlySentEmail(bodyWithIp);
+  if (hasRecentlySent) {
+    return;
+  }
+
   await sendEmail(body);
-  await storeMail(body);
+  await storeMail(bodyWithIp);
 };
 
 
