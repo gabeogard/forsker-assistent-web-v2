@@ -3,7 +3,7 @@ services:
   next:
     image: ghcr.io/gabeogard/forsker-assistent-web-v2:main
     ports:
-      - "127.0.0.1:3030:3030"
+      - "3030:3030"
     env_file: .env.local
     extra_hosts:
       - "host.docker.internal:host-gateway"
