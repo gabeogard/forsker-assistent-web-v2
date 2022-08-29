@@ -7,3 +7,7 @@ services:
     env_file: .env.local
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - forskerassistenten
+networks:
+  forskerassistenten:
