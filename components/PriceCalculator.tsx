@@ -22,7 +22,7 @@ const PriceCalculator = () => {
               <option key={value} value={value}>{value}</option>
             ))}
           </select>
-          <p>Hvor lang er lydfilen?</p>
+          <p>Hvor lang er lydfilen? (Ant. minutter)</p>
           <input
             value={selectedMinutes ?? 0}
             onChange={(event) => setSelectedMinutes(Number(event.target.value))}
