@@ -17,8 +17,8 @@ export const NavMenu = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link href="/">Hjem</Link></li>
-        <li><Link href="/about">Om oss</Link></li>
         <li><Link href="/services">Tjenester</Link></li>
+        <li><Link href="/about">Om oss</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl">
@@ -33,8 +33,8 @@ export const NavMenu = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
       <li><Link href="/">Hjem</Link></li>
-      <li><Link href="/about">Om oss</Link></li>
       <li><Link href="/services">Tjenester</Link></li>
+      <li><Link href="/about">Om oss</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
