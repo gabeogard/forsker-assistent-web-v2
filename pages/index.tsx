@@ -3,22 +3,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { NavMenu } from "../components/NavMenu";
+import { WelcomeItem } from "../components/WelcomeItem";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <title>Forskerassistenten</title>
-      <Navbar />
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-4xl font-bold">Velkommen til Forskerassistenten</h1>
-            <br></br>
-            <p className="text-2xl md:text-md">Forskerassistenten ønsker å gjøre forskningsarbeidet enklere ved å utføre enkle og tidsbesparende arbeidsoppgaver for forskere og studenter.</p>
-          </div>
-        </div>
+    <div className="bg-base-100 drawer">
+      <div className="drawer-content">
+        <NavMenu/>
+        <WelcomeItem/>
       </div>
-      <Footer />
     </div>
   );
 };

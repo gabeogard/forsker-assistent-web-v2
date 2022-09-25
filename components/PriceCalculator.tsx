@@ -15,7 +15,7 @@ const PriceCalculator = () => {
           <select
             value={amountPeople}
             onChange={(event) => setAmountPeople(Number(event.target.value))}
-            className="select select-bordered w-full max-w-xs"
+            className="select select-bordered w-full max-w-xs text-primary"
           >
             <option disabled>Antall</option>
             {range(9, 2).map((value) => (
@@ -28,34 +28,34 @@ const PriceCalculator = () => {
             onChange={(event) => setSelectedMinutes(Number(event.target.value))}
             type="number"
             placeholder="Antall minutter"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full max-w-xs text-primary"
           />
           <div className="form-control">
             <label className="label cursor-pointer">
-              <span className="label-text extra-text">
+              <span className="text-secondary">
                 <strong>Norsk</strong>
               </span>
               <input
                 type="radio"
-                name="radio-6"
+                name="radio"
                 className="radio checked:bg-green-500"
               />
             </label>
           </div>
           <div className="form-control">
             <label className="label cursor-pointer">
-              <span className="label-text extra-text">
+              <span className="text-secondary">
                 <strong>Engelsk</strong>
               </span>
               <input
                 type="radio"
-                name="radio-6"
+                name="radio"
                 className="radio checked:bg-green-500"
               />
             </label>
           </div>
           <div className="card-actions justify-end">
-            <p className="final-price">
+            <p className="final-price text-secondary">
               <strong>Pris inkl mva. (25%):</strong> {amountPeople ? calculateCost(amountPeople, selectedMinutes).toLocaleString('nb-no') : 0},-
             </p>
           </div>
