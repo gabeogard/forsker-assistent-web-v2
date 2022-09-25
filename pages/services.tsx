@@ -15,6 +15,7 @@ const Services: NextPage = () => {
       <div className="drawer-content">
         <NavMenu/>
         <ServiceSection/>
+        <meta name="description" content="Vi tilbyr transkribering av intervjuer for forskere og studenter."/>
       </div>
     </div>
   );
