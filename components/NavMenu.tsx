@@ -21,7 +21,7 @@ export const NavMenu = () => {
         <li><Link href="/about">Om oss</Link></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">
+    <a className="btn btn-ghost normal-case sm:text-l lg:text-xl md:text-xl">
     <Image
                 src={magnifyingGlass}
                 width={30}

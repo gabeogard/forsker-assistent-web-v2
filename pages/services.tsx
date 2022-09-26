@@ -12,7 +12,7 @@ const Services: NextPage = () => {
   return (
     <div className="bg-base-100 drawer">
       <title>Tjenester</title>
-      <div className="drawer-content min-h-auto">
+      <div className="drawer-content h-900">
         <NavMenu/>
         <ServiceSection/>
         <meta name="description" content="Vi tilbyr transkribering av intervjuer for forskere og studenter."/>
