@@ -38,7 +38,7 @@ export const NavMenu = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Kontakt oss</a>
+    <a className="lg:btn md:btn sm:btn-sm">Kontakt oss</a>
   </div>
 </div>
     );
