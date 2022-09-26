@@ -8,7 +8,7 @@ import { NavMenu } from "../components/NavMenu";
 const About: NextPage = () => {
   return (
     <div className="bg-base-100 drawer">
-      <div className="drawer-content">
+      <div className="drawer-content overflow-scroll">
       <title>Om Oss</title>
       <NavMenu />
       <AboutSection/>
