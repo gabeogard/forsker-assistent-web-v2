@@ -2,7 +2,7 @@ import Image from "next/image";
 import magnifyingGlass from "../assets/magnifying-glass.svg";
 import Link from "next/link";
 export const NavMenu = () => {
-  <Image src={magnifyingGlass} width={30} height={30} alt={"logo"} />;
+  
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -38,10 +38,12 @@ export const NavMenu = () => {
             </li>
           </ul>
         </div>
+        <Link href="/">
         <a className="btn btn-ghost normal-case sm:text-l lg:text-xl md:text-xl">
           <Image src={magnifyingGlass} width={30} height={30} alt={"logo"} />
           Forskerassistenten
         </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">

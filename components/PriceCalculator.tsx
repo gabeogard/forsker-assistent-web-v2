@@ -31,7 +31,7 @@ const PriceCalculator = () => {
             className="input input-bordered sm:w-sm lg:w-full md:w-full max-w-xs text-primary"
           />
           <div className="card-actions justify-end">
-            <p className="final-price text-secondary">
+            <p className="text-secondary">
               <strong>Pris inkl mva. (25%):</strong> {amountPeople ? calculateCost(amountPeople, selectedMinutes).toLocaleString('nb-no') : 0},-
             </p>
           </div>
