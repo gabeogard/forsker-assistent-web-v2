@@ -35,7 +35,7 @@ const ContactForm = () => {
 
   return (
       <div className="contact-modal">
-        <div className="contact-info">
+        
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Navn</span>
@@ -66,7 +66,7 @@ const ContactForm = () => {
               <span className="label-text-alt">Nødvendig felt*</span>{" "}
             </label>
           </div>
-        </div>
+        
         <div className="form-control w-full max-w-xs">
           <label className="label">
             <span className="label-text">Emne</span>
@@ -95,7 +95,7 @@ const ContactForm = () => {
             <span className="label-text-alt">Nødvendig felt*</span>{" "}
           </label>
         </div>
-        <button className="btn btn-success" onClick={(e)=>{handleSubmit(e)}}>Send forespørsel</button>
+        <button className="btn btn-primary" onClick={(e)=>{handleSubmit(e)}}>Send forespørsel</button>
       </div>
     
   );

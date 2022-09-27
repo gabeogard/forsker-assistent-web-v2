@@ -10,8 +10,8 @@ const Home: NextPage = () => {
   return (
     <div className="bg-base-100 drawer">
       <div className="drawer-content">
-        <NavMenu/>
-        <WelcomeItem/>
+        <NavMenu />
+        <WelcomeItem />
       </div>
     </div>
   );

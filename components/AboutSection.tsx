@@ -1,3 +1,5 @@
+import { ContactModal } from "./contactModal";
+
 export const AboutSection = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -13,6 +15,7 @@ export const AboutSection = () => {
           <p className="lg:py-6 md:py-4 sm:py-4  text-l">Universitetslektor/Ph.D stipendiat, Universitetet i Agder</p>
         </div>
       </div>
+      <ContactModal/>
     </div>
   );
 };
